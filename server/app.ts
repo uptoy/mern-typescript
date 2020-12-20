@@ -2,6 +2,7 @@ import express from 'express'
 import morgan from 'morgan'
 import cors from 'cors'
 import config from './config'
+import articleRoutes from './routes/articles.routes'
 
 const app = express()
 

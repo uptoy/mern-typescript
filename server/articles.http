@@ -1,0 +1,17 @@
+@api = http://localhost:4000
+
+GET {{api}}/articles
+
+GET {{api}}/article/1
+
+POST {{api}}/articles
+Content-Type: application/json
+{
+    "titile":test-title,
+    "description":test-description
+}
+
+
+DELETE {{api}}/article/1
+
+PUT {{api}}/articles/1
