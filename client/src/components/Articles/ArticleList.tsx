@@ -1,6 +1,7 @@
 import React,{useEffect,useState} from 'react';
 import {Article} from './Article'
 import * as articleService from './ArticleService'
+import ArticleItem from './ArticleItem'
 
 const ArticleList = () => {
 
@@ -16,9 +17,7 @@ const ArticleList = () => {
   return (
     <div>
       {articles.map((article)=>{
-        <div>
-          <h1>{article.title}</h1>
-        </div>
+        return <ArticleItem article={article}/>
       })}
     </div>
   );
