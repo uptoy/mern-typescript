@@ -16,8 +16,8 @@ const App = () => {
 
       <div className="container p-4">
         <Switch>
-          <Route exact path={["/", "/videos"]} component={ArticleList} />
-          <Route path="/new-video" component={ArticleForm} />
+          <Route exact path={["/", "/articles"]} component={ArticleList} />
+          <Route path="/new-article" component={ArticleForm} />
           <Route path="/update/:id" component={ArticleForm} />
         </Switch>
         <ToastContainer />
