@@ -1,19 +1,27 @@
 import React from 'react';
-import './App.css';
 import {BrowserRouter,Route,Switch} from 'react-router-dom'
 import ArticleList from './components/Articles/ArticleList'
+import NavBar from './components/NavBar/NavBar'
+import "react-toastify/dist/ReactToastify.css";
+import 'animate.css/animate.min.css';
+import "./index.css";
 import 'bootswatch/dist/pulse/bootstrap.min.css'
-import 'App.css'
-import NavBar from '.components/NavBar/NavBar'
+import ArticleForm from "./components/Articles/ArticleForm";
+import { ToastContainer } from "react-toastify";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Switch>
-        <NavBar />
-        <Route path ="/" component={ArticleList} />
-        <Route path ="/" component={ArticleList} />
-      </Switch>
+      <NavBar />
+
+      <div className="container p-4">
+        <Switch>
+          <Route exact path={["/", "/videos"]} component={ArticleList} />
+          <Route path="/new-video" component={ArticleForm} />
+          <Route path="/update/:id" component={ArticleForm} />
+        </Switch>
+        <ToastContainer />
+      </div>
     </BrowserRouter>
     );
 }

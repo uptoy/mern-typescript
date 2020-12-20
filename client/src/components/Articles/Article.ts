@@ -1,7 +1,7 @@
 export interface Article {
-  createdAt:string
-  description:string
-  title:string
-  updatedAt:string
-  _id:string
+  _id?: string;
+  title: string;
+  description: string;
+  createdAt?: string | Date;
+  updatedAt?: string | Date;
 }
